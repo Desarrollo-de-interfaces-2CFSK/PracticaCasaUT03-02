@@ -19,7 +19,7 @@ export default function Footer() {
             </ul>
         </div>
         <div>
-            <p className="mt-4">© 2025 TerraBloom. AbdelMoghit Samini</p>
+            <p className="mt-4">2025 TerraBloom. AbdelMoghit Samini</p>
         </div>
       </div>
     </footer>
