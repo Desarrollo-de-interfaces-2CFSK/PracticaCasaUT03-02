@@ -24,27 +24,15 @@ const getAllInterpretes = (peliculas) => {
 
 
 export default function InterpretesPage() {
-  //  Obtenemos la lista única de intérpretes
   const interpretes = getAllInterpretes(peliculas);
 
   return (
     <section>
       <h2 className="text-2xl font-semibold mb-4 text-center">Listado de Intérpretes</h2>
       
-      {/* Llamo al componente List, le paso la funccion renderItem */}
-      <List 
-        items={interpretes} 
-        renderItem={(interprete) => (
-          // Usamos tu componente Interprete para renderizar cada item
-          <Interprete
-            key={interprete.id}
-            nombre={interprete.nombre}
-            foto={interprete.imagen} 
-          >
-            {interprete.biografia}
-          </Interprete>
-        )}
-      />
+      {/* Usamos una prop simple en vez de una función */}
+      <List items={interpretes} esInterprete={true} />
+      
     </section>
   );
 }
