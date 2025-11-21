@@ -47,7 +47,7 @@ export default function DetailPage() {
         
         {/* Info */}
         <div className="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
-          <span className="text-teal-600 font-semibold text-sm uppercase tracking-wider mb-2">Fresco & Natural</span>
+          <span className="text-teal-600 font-semibold text-sm uppercase tracking-wider mb-2">Fresco y Natural</span>
           <h1 className="text-4xl font-bold text-gray-900 mb-4">{producto.nombre}</h1>
           
           <p className="text-3xl font-bold text-teal-700 mb-6">{producto.precio.toFixed(2)}€ <span className="text-base font-normal text-gray-400">/ ud</span></p>

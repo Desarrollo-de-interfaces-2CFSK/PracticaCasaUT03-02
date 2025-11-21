@@ -8,8 +8,7 @@ export default function Footer() {
     >
       <div className="container mx-auto grid md:grid-cols-3 gap-8 text-sm">
         <div>
-            <h4 className="font-bold text-white mb-2">TerraBloom</h4>
-            <p>Productos frescos de calidad superior.</p>
+              <img src="/public/imagenes/logo.png" alt="TerraBloom Logo" />
         </div>
         <div>
             <h4 className="font-bold text-white mb-2">Enlaces</h4>

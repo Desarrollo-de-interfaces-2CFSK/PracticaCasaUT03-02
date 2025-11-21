@@ -20,7 +20,7 @@ export default function Header() {
           aria-label="Inicio - TerraBloom"
         >
           {/* Icono de hoja opcional */}
-          <span>🌿 TerraBloom</span>
+          <span>TerraBloom</span>
         </Link>
         
         <Nav />
