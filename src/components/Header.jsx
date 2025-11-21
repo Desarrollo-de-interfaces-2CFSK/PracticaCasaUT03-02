@@ -3,31 +3,26 @@ import { Link } from 'react-router-dom';
 import Nav from './Nav.jsx';
 
 /**
- * Header global de la web.
- *
- * Contiene:
- * - Un Link que actúa como logo/título y enlaza a la raíz.
- * - El componente Nav (menú de navegación).
- *
+ * Header global estilo TerraBloom.
+ * Fondo verde azulado oscuro (teal-700).
  */
 export default function Header() {
   return (
-    // Identifica el header para tecnologías asistivas
     <header 
       role="banner" 
-      className="bg-white shadow-md w-full p-4"
+      className="bg-teal-700 shadow-md w-full p-4 text-white"
     >
       <div className="container mx-auto flex justify-between items-center">
-        {/* Título/Logo enlazado a la raíz */}
+        {/* Logo / Título */}
         <Link 
           to="/" 
-          className="text-2xl font-bold text-blue-700 hover:text-blue-900"
-          aria-label="Inicio - Peliculas"
+          className="text-2xl font-bold text-white flex items-center gap-2 hover:text-teal-100"
+          aria-label="Inicio - TerraBloom"
         >
-          Peliculas
+          {/* Icono de hoja opcional */}
+          <span>🌿 TerraBloom</span>
         </Link>
         
-        {/* Componente de Navegación */}
         <Nav />
       </div>
     </header>

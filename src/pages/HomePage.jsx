@@ -1,23 +1,29 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-/**
- * Página de Inicio (Bienvenida)
- * Muestra un mensaje de bienvenida y un enlace al listado.
- */
 export default function HomePage() {
   return (
-    <section className="text-center py-10">
-      <h2 className="text-3xl font-bold mb-4">¡Bienvenido a Mis Peliculas!</h2>
-      <p className="text-lg mb-6">
-        Explora nuestro catálogo completo de películas.
-      </p>
-      <Link 
-        to="/peliculas" 
-        className="bg-blue-600 text-white font-bold py-2 px-4 rounded hover:bg-blue-700 transition-colors"
-      >
-        Ver catálogo
-      </Link>
+    <section className="text-center py-20 px-4">
+      <div className="max-w-2xl mx-auto">
+        <h1 className="text-5xl font-bold text-teal-900 mb-6">Frescura Natural en tu Hogar</h1>
+        <p className="text-xl text-gray-600 mb-10">
+          Descubre nuestra selección de frutas y verduras de temporada, directamente del campo a tu mesa.
+        </p>
+        <div className="flex justify-center gap-4">
+            <Link 
+                to="/productos" 
+                className="bg-teal-700 text-white text-lg font-semibold py-3 px-8 rounded-full hover:bg-teal-800 transition shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+            >
+                Ver Productos
+            </Link>
+            <Link 
+                to="/ofertas" 
+                className="bg-white text-teal-700 border border-teal-700 text-lg font-semibold py-3 px-8 rounded-full hover:bg-teal-50 transition"
+            >
+                Ofertas del Día
+            </Link>
+        </div>
+      </div>
     </section>
   );
 }

@@ -2,78 +2,60 @@ import { useState } from "react";
 import { NavLink } from 'react-router-dom';
 
 /**
- * Componente Nav: menú de navegación responsive.
- *
- * - Muestra un botón tipo "hamburger" en móvil para abrir/cerrar el menú.
- * - Usa NavLink para aplicar estilos cuando la ruta está activa.
- * - Al hacer click en un enlace en móvil, cierra el menú (setOpen(false)).
- *
- * @returns {JSX.Element}
+ * Navegación con estilos de TerraBloom.
+ * Active class: texto blanco y subrayado o negrita.
+ * Inactive: texto teal-100 (verde muy claro).
  */
 const activeClass = ({ isActive }) => 
   isActive 
-    ? 'text-blue-600 font-semibold' // estilo cuando la ruta es activa
-    : 'text-gray-700 hover:text-blue-500'; // estilo por defecto
+    ? 'text-white font-bold underline decoration-lime-400 decoration-2 underline-offset-4' 
+    : 'text-teal-100 hover:text-white transition-colors';
 
 export default function Nav() {
-  // // Controla si el menú en móvil está abierto o cerrado
   const [open, setOpen] = useState(false);
   const menuId = "main-navigation-menu";
 
   return (
     <>
-      {/* Botón visible solo en pantallas pequeñas (md:hidden).
-          aria-expanded indica si el menú está abierto y aria-controls referencia el id del nav */}
+      {/* Botón hamburguesa (visible en móvil) - Texto blanco */}
       <button
-        aria-label={open ? "Cerrar menú de navegación" : "Abrir menú de navegación"}
+        aria-label={open ? "Cerrar menú" : "Abrir menú"}
         aria-expanded={open}
         aria-controls={menuId}
         onClick={() => setOpen(!open)}
-        className="text-gray-700 text-2xl p-2 md:hidden focus:outline-none focus:ring"
+        className="text-white text-2xl p-2 md:hidden focus:outline-none focus:ring focus:ring-lime-400 rounded"
       >
-        {/* Se cambia el icono dependiendo del estado */}
         {open ? '✕' : '☰'}
       </button>
 
-      {/*  Menú de Navegación */}
+      {/* Menú */}
       <nav 
         aria-label="Menú principal"
         id={menuId}
-      
-        className={`${open ? 'block' : 'hidden'} md:flex`}
+        className={`${open ? 'block absolute top-16 left-0 w-full bg-teal-800 p-4 z-50' : 'hidden'} md:flex md:static md:bg-transparent md:p-0 md:w-auto`}
       >
-        {/*
-          En móvil: la lista es vertical por defecto si la pones en 'block'.
-          En desktop: usamos flex y gap para la disposición horizontal.
-        */}
-        <ul className="flex flex-col md:flex-row gap-4 items-center">
-        
-          {/* Los NavLink llaman a setOpen(false) para cerrar el menú en móvil */}
-          
+        <ul className="flex flex-col md:flex-row gap-6 items-center">
           <li>
             <NavLink to="/" className={activeClass} end onClick={() => setOpen(false)}>
               Inicio
             </NavLink>
           </li>
-      
           <li>
-            <NavLink to="/peliculas" className={activeClass} onClick={() => setOpen(false)}>
-              Películas
+            <NavLink to="/productos" className={activeClass} onClick={() => setOpen(false)}>
+              Productos
             </NavLink>
           </li>
-          
-          <li>
-            <NavLink to="/interpretes" className={activeClass} onClick={() => setOpen(false)}>
-              Intérpretes
-            </NavLink>
-          </li>
-          
           <li>
             <NavLink to="/admin" className={activeClass} onClick={() => setOpen(false)}>
               Admin
             </NavLink>
           </li>
-          
+          {/* Iconos extra estilo header (Búsqueda, Carrito, Usuario) */}
+          <li className="flex gap-4 md:ml-4">
+             <span className="cursor-pointer hover:text-lime-400">🔍</span>
+             <span className="cursor-pointer hover:text-lime-400">🛒</span>
+             <span className="cursor-pointer hover:text-lime-400">👤</span>
+          </li>
         </ul>
       </nav>
     </>
