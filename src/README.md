@@ -12,30 +12,26 @@ La interfaz sigue fielmente mi diseño base y mantiene coherencia visual en toda
 ![alt text](image-7.png)
 
 ### b. Análisis y modificación del código
-He ajustado el código adaptando clases, jerarquías y contenedores.
-Toda la maquetación está optimizada y limipia aqui podrás ver el desarollo :
-
-[Componente List](./src/components/List.jsx)  
-
-[Página productos](./src/pages/ProductosPages.jsx)  
+He revisado y adaptado el código generado, ajustando clases, jerarquías y contenedores para que todo quede limpio, coherente y fácil de mantener.  
+La maquetación de `List.jsx` y otros componentes está optimizada, ordenada y lista para reutilizar en cualquier parte de la aplicación.
 
 
-### b. Aplicación funcional
+### c. Aplicación funcional
 
 ![alt text](image-4.png)
 
 ## 2. Creación de componentes
-### a. Creación de componentes
+
 Organización de proyecto
 
 ![alt text](image-6.png)
 
-### b. Propiedades, eventos y acciones
+###  Propiedades, eventos y acciones
 ![alt text](image-8.png)
 
 ![alt text](image-9.png)
 
-### c. Documentación de componentes
+###  Documentación de componentes
 Estan los componentes documentados con JavaDoc
 
 
