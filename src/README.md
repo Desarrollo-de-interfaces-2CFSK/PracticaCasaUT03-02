@@ -12,12 +12,13 @@ La interfaz sigue fielmente mi diseño base y mantiene coherencia visual en toda
 ![alt text](image-7.png)
 
 ### b. Análisis y modificación del código
-He ajustado el código generado por el editor adaptando clases, jerarquías y contenedores.
-Toda la maquetación está optimizada, limpia y siguiendo una metodología clara basada en componentes.
+He ajustado el código adaptando clases, jerarquías y contenedores.
+Toda la maquetación está optimizada y limipia aqui podrás ver el desarollo :
 
-[List](List.jsx)
+[Componente List](./src/components/List.jsx)  
 
-[Página Productos](ProductosPages.jsx)
+[Página productos](./src/pages/ProductosPages.jsx)  
+
 
 ### b. Aplicación funcional
 
