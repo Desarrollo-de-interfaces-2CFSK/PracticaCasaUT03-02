@@ -1,4 +1,4 @@
-#  Documentación Técnica y Visual
+#  Documentación  y Explicación
 
 **Autor:** AbdelMoghit Samini  
 **Práctica:** Desarrollo de Interfaces (UT03)  
